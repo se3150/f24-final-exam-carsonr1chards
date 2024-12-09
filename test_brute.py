@@ -55,6 +55,11 @@ def describe_Brute():
 
             assert b.bruteMany() != -1
 
+        def it_fails_short_limit():
+            b = Brute("reallylongstringtesting")
+
+            assert b.bruteMany(10) == -1
+
         def it_cracks_target_large(mocker):
             b = Brute("testingwithmocker")
 
